@@ -1,6 +1,8 @@
 package jp.ace.pro.yamanotestationroulette;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                goToStationDetailActivity();
             }
         });
 
@@ -54,5 +56,14 @@ public class MainActivity extends AppCompatActivity {
      */
     private String randomStation() {
         return yamanoteStations[(int)(Math.random() * yamanoteStations.length)];
+    }
+
+    /**
+     * 駅詳細画面へ遷移する
+     */
+    private void goToStationDetailActivity() {
+        Intent intent = IntentUtil.StationDetailActivityIntent(MainActivity.this);
+        intent.putExtra(IntentUtil.STATION_NAME, textView.getText());
+        startActivity(intent);
     }
 }
