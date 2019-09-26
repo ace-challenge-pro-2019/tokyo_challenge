@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
 
     String[] yamanoteStations = {"品川", "大崎", "五反田", "目黒", "恵比寿",
