@@ -10,12 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String[] yamanoteStations = {"品川", "大崎", "五反田", "目黒", "恵比寿",
-            "渋谷", "原宿", "代々木", "新宿", "新大久保",
-    "高田馬場", "目白", "池袋", "大塚", "巣鴨",
-    "駒込", "田端", "西日暮里", "日暮里", "鶯谷",
-    "上野", "御徒町", "秋葉原", "神田", "東京",
-    "有楽町", "新橋", "浜松町", "田町", "高輪ゲートウェイ"};
+    String displayStationName;
+    String stationCode;
 
     // 駅名表示欄
     TextView textView;
@@ -27,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 駅名表示
         textView = findViewById(R.id.text);
-        textView.setText(randomStation());
+        randomStation();
 
         // 詳細ボタン
         Button detailButton = findViewById(R.id.detailButton);
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView.setText(randomStation());
+                MainActivity.this.randomStation();
             }
         });
     }
@@ -52,8 +48,14 @@ public class MainActivity extends AppCompatActivity {
      * ランダムで駅名を返す
      * @return 駅名
      */
-    private String randomStation() {
-        return yamanoteStations[(int)(Math.random() * yamanoteStations.length)];
+    private void randomStation() {
+        StationConstants sc = new StationConstants();
+        int index = (int)(Math.random() * sc.STATION_NUM);
+        this.stationCode = sc.STATIONS[index][0];
+        this.displayStationName = sc.STATIONS[index][1];
+
+        textView.setText(this.displayStationName);
+//        return this.displayStationName;
     }
 
     /**

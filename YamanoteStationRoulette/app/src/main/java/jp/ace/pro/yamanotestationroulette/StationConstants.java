@@ -1,0 +1,71 @@
+package jp.ace.pro.yamanotestationroulette;
+
+public final class StationConstants {
+    public static final int STATION_NUM = 30;
+
+    public static final String[][] STATIONS = {
+            {"JY01","東京"},
+            {"JY02","神田"},
+            {"JY03","秋葉原"},
+            {"JY04","御徒町"},
+            {"JY05","上野"},
+            {"JY06","鶯谷"},
+            {"JY07","日暮里"},
+            {"JY08","西日暮里"},
+            {"JY09","田端"},
+            {"JY10","駒込"},
+            {"JY11","巣鴨"},
+            {"JY12","大塚"},
+            {"JY13","池袋"},
+            {"JY14","目白"},
+            {"JY15","高田馬場"},
+            {"JY16","新大久保"},
+            {"JY17","新宿"},
+            {"JY18","代々木"},
+            {"JY19","原宿"},
+            {"JY20","渋谷"},
+            {"JY21","恵比寿"},
+            {"JY22","目黒"},
+            {"JY23","五反田"},
+            {"JY24","大崎"},
+            {"JY25","品川"},
+            {"JY26","高輪ゲートウェイ"},
+            {"JY27","田町"},
+            {"JY28","浜松町"},
+            {"JY29","新橋"},
+            {"JY30","有楽町"}
+    };
+
+    public static final String[][] IMAGES = {
+            {"JY01","station01"},
+            {"JY02","station02"},
+            {"JY03","station03"},
+            {"JY04","station04"},
+            {"JY05","station05"},
+            {"JY06","station06"},
+            {"JY07","station07"},
+            {"JY08","station08"},
+            {"JY09","station09"},
+            {"JY10","station10"},
+            {"JY11","station11"},
+            {"JY12","station12"},
+            {"JY13","station13"},
+            {"JY14","station14"},
+            {"JY15","station15"},
+            {"JY16","station16"},
+            {"JY17","station17"},
+            {"JY18","station18"},
+            {"JY19","station19"},
+            {"JY20","station20"},
+            {"JY21","station21"},
+            {"JY22","station22"},
+            {"JY23","station23"},
+            {"JY24","station24"},
+            {"JY25","station25"},
+            {"JY26","station26"},
+            {"JY27","station27"},
+            {"JY28","station28"},
+            {"JY29","station29"},
+            {"JY30","station30"}
+    };
+}
