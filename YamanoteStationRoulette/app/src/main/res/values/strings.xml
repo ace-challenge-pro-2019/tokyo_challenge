@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">YamanoteStationRoulette</string>
+    <string name="map_api_key">AIzaSyBTRWnVgLFL1_kTzIZi2wzSps1TE_TUu2A</string>
 </resources>
