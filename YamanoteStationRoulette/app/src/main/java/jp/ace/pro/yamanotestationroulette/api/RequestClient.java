@@ -20,7 +20,7 @@ public class RequestClient {
     private static final String BASE_URL = "https://api-tokyochallenge.odpt.org";
 
     // 山手線の路線ID (odpt:Railwayのowl:sameAs)
-    static final String RAILWAY_ID = "odpt.Railway:JR-East.Yamanote";
+    static final String RAILWAY_ID_YAMANOTE = "odpt.Railway:JR-East.Yamanote";
 
     Retrofit retrofit;
 

@@ -4,11 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import jp.ace.pro.yamanotestationroulette.api.API;
+import jp.ace.pro.yamanotestationroulette.api.StationRequestClient;
+import jp.ace.pro.yamanotestationroulette.api.dto.StationDTO;
+
 public class MainActivity extends AppCompatActivity {
+
+    public static final String TAG = MainActivity.class.getSimpleName();
 
     String displayStationName;
     String stationCode;
@@ -30,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         detailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToStationDetailActivity();
+                showStationDetail(displayStationName);
             }
         });
 
@@ -45,25 +52,39 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * ランダムで駅名を返す
-     * @return 駅名
+     * ランダムに駅名を変更する
      */
     private void randomStation() {
-        StationConstants sc = new StationConstants();
-        int index = (int)(Math.random() * sc.STATION_NUM);
-        this.stationCode = sc.STATIONS[index][0];
-        this.displayStationName = sc.STATIONS[index][1];
+        int index = (int) (Math.random() * StationConstants.STATION_NUM);
+        this.stationCode = StationConstants.STATIONS[index][0];
+        this.displayStationName = StationConstants.STATIONS[index][1];
 
         textView.setText(this.displayStationName);
-//        return this.displayStationName;
     }
 
     /**
-     * 駅詳細画面へ遷移する
+     * 駅詳細画面を表示するための処理
      */
-    private void goToStationDetailActivity() {
-        Intent intent = IntentUtil.StationDetailActivityIntent(MainActivity.this);
-        intent.putExtra(IntentUtil.STATION_NAME, textView.getText());
-        startActivity(intent);
+    private void showStationDetail(String stationName) {
+        // 選択した駅の情報を取得
+        new StationRequestClient().getStationInfo(stationName, new API.getStationInfoResultListener() {
+            @Override
+            public void onSuccess(StationDTO dto) {
+                String stationName = dto.getDcTitle();
+                double latitude = dto.getGeoLat();
+                double longitude = dto.getGeoLong();
+                Intent intent = IntentUtil.StationDetailActivityIntent(MainActivity.this,
+                        stationName,
+                        latitude,
+                        longitude);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onFailure() {
+                Log.d(TAG, "駅情報取得に失敗");
+                // 通信失敗時は何もしない
+            }
+        });
     }
 }
