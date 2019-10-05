@@ -34,16 +34,15 @@ public class StationRequestClient extends RequestClient {
 
                     @Override
                     public void onSuccess(List<StationDTO> stationDTOS) {
-                        Log.d("getStationInfo", "onSuccess ");
                         // リスト型で受け取るが、路線＋駅名で検索しているので一意になる想定
-                        if (stationDTOS.size() == 1) {
-                            Log.d("selected station is ", stationDTOS.get(0).getDcTitle());
-                            resultListener.onSuccess(stationDTOS.get(0));
-                        } else {
-                            // レスポンスに複数の駅情報がある場合はエラー扱いとする
+                        // レスポンスに複数の駅情報がある場合はエラー扱いとする
+                        if (stationDTOS.size() != 1) {
                             Log.d("getStationInfo", "onSuccess : ResponseError");
                             resultListener.onFailure();
                         }
+
+                        Log.d("selected station is ", stationDTOS.get(0).getDcTitle());
+                        resultListener.onSuccess(stationDTOS.get(0));
                     }
 
                     @Override
