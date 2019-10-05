@@ -3,6 +3,8 @@ package jp.ace.pro.yamanotestationroulette;
 import android.content.Context;
 import android.content.Intent;
 
+import androidx.annotation.NonNull;
+
 public class IntentUtil {
 
     // 駅名
@@ -21,7 +23,7 @@ public class IntentUtil {
      * @param longitude   経度
      * @return インテント
      */
-    public static Intent StationDetailActivityIntent(Context context, String stationName, double latitude, double longitude) {
+    public static Intent StationDetailActivityIntent(@NonNull Context context, String stationName, double latitude, double longitude) {
         Intent intent = new Intent(context, StationDetailActivity.class);
         intent.putExtra(STATION_NAME, stationName);
         intent.putExtra(LATITUDE, latitude);
