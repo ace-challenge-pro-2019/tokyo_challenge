@@ -12,10 +12,16 @@ import retrofit2.http.Query;
  */
 public interface API {
 
-    // 通信結果
+    // 通信結果　汎用インターフェース
     interface ResultListener {
         void onSuccess();
 
+        void onFailure();
+    }
+
+    // 駅情報取得結果
+    interface getStationInfoResultListener {
+        void onSuccess(StationDTO stationDTO);
         void onFailure();
     }
 

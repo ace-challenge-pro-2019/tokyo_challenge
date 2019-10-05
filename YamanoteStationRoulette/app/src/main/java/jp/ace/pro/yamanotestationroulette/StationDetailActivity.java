@@ -13,9 +13,6 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 
-import jp.ace.pro.yamanotestationroulette.api.API;
-import jp.ace.pro.yamanotestationroulette.api.StationRequestClient;
-
 /**
  * 駅詳細画面
  */
@@ -25,31 +22,24 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
 
     private MapView mapView;
     private GoogleMap googleMap;
+    // 緯度
+    private double latitude;
+    // 経度
+    private double longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_station_detail);
 
+        // 前の画面からの情報を受け取る
         Intent intent = getIntent();
         String stationName = intent.getStringExtra(IntentUtil.STATION_NAME);
+        latitude = intent.getDoubleExtra(IntentUtil.LATITUDE, 0);
+        longitude = intent.getDoubleExtra(IntentUtil.LONGITUDE, 0);
 
         TextView textView = findViewById(R.id.stationName);
         textView.setText(stationName);
-
-        // 選択した駅の情報を取得
-        new StationRequestClient().getStationInfo(stationName, new API.ResultListener() {
-            @Override
-            public void onSuccess() {
-                Log.d(TAG, "getStationInfo onSuccess");
-
-            }
-
-            @Override
-            public void onFailure() {
-                Log.d(TAG, "getStationInfo onFailure");
-            }
-        });
 
         mapView = findViewById(R.id.map_view);
         mapView.getMapAsync(this);
@@ -66,7 +56,15 @@ public class StationDetailActivity extends AppCompatActivity implements OnMapRea
     public void onMapReady(GoogleMap googleMap) {
         Log.d("test", "call onMapReady");
         this.googleMap = googleMap;
-        LatLng japan = new LatLng(35.39, 139.44);
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(japan));
+        // 選んだ駅の座標を指定
+        LatLng latLng = new LatLng(latitude, longitude);
+        // ズームレベル
+        // 1：ワールド
+        // 5：陸地/大陸
+        // 10：市
+        // 15：通り
+        // 20：建物
+        float zoomLevel = 15;
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel));
     }
 }

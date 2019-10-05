@@ -20,9 +20,9 @@ public class StationRequestClient extends RequestClient {
      * @param stationName 駅名
      * @param resultListener 通信成否コールバック
      */
-    public void getStationInfo(String stationName, final API.ResultListener resultListener) {
+    public void getStationInfo(String stationName, final API.getStationInfoResultListener resultListener) {
         retrofit.create(API.class)
-                .getStation(ACCSESS_KEY, stationName, RAILWAY_ID)
+                .getStation(ACCSESS_KEY, stationName, RAILWAY_ID_YAMANOTE)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new SingleObserver<List<StationDTO>>() {
@@ -34,12 +34,15 @@ public class StationRequestClient extends RequestClient {
 
                     @Override
                     public void onSuccess(List<StationDTO> stationDTOS) {
-                        // TODO ここで取得した駅情報を何かしらに使用する
-                        Log.d("getStationInfo", "onSuccess ");
-                        for (StationDTO stationDTO : stationDTOS) {
-                            Log.d("selected station is ", stationDTO.getDcTitle());
+                        // リスト型で受け取るが、路線＋駅名で検索しているので一意になる想定
+                        // レスポンスに複数の駅情報がある場合はエラー扱いとする
+                        if (stationDTOS.size() != 1) {
+                            Log.d("getStationInfo", "onSuccess : ResponseError");
+                            resultListener.onFailure();
                         }
-                        resultListener.onSuccess();
+
+                        Log.d("selected station is ", stationDTOS.get(0).getDcTitle());
+                        resultListener.onSuccess(stationDTOS.get(0));
                     }
 
                     @Override
