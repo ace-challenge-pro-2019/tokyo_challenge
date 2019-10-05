@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private void randomStation() {
         int index = (int) (Math.random() * StationConstants.STATION_NUM);
-        this.stationCode = StationConstants.STATIONS[index][0];
-        this.displayStationName = StationConstants.STATIONS[index][1];
+        stationCode = StationConstants.STATIONS[index][0];
+        displayStationName = StationConstants.STATIONS[index][1];
 
-        textView.setText(this.displayStationName);
+        textView.setText(displayStationName);
     }
 
     /**
