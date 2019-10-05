@@ -9,7 +9,7 @@ public class IntentUtil {
     public static final String STATION_NAME = "STATION_NAME";
     // 緯度
     public static final String LATITUDE = "LATITUDE";
-    // 軽度
+    // 経度
     public static final String LONGITUDE = "LONGITUDE";
 
     /**
@@ -18,7 +18,7 @@ public class IntentUtil {
      * @param context     コンテキスト
      * @param stationName 駅名
      * @param latitude    緯度
-     * @param longitude   軽度
+     * @param longitude   経度
      * @return インテント
      */
     public static Intent StationDetailActivityIntent(Context context, String stationName, double latitude, double longitude) {
