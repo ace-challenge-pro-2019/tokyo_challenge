@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "617036820110",
+    "firebase_url": "https://tokyo-open-challenge.firebaseio.com",
+    "project_id": "tokyo-open-challenge",
+    "storage_bucket": "tokyo-open-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617036820110:android:48b571392f5033139263df",
+        "android_client_info": {
+          "package_name": "jp.ace.pro.yamanotestationroulette"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617036820110-ret8vk8957uigpchihr7rl9gkev2ujpr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jp.ace.pro.yamanotestationroulette",
+            "certificate_hash": "a762e4001bdb376f69428afd460a2816cbaaa7d1"
+          }
+        },
+        {
+          "client_id": "617036820110-ucim3b0c8pq9cav3l6ut3iv02djto5rt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "jp.ace.pro.yamanotestationroulette",
+            "certificate_hash": "a29e13b7c1f15501159b9ed660f8221478eacc21"
+          }
+        },
+        {
+          "client_id": "617036820110-fqq1fnkkh06a6bbs7uga3nkinefsbg20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTe6lOuYoCzFsDvGjfDLGwRQasPKAU7BI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617036820110-fqq1fnkkh06a6bbs7uga3nkinefsbg20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
