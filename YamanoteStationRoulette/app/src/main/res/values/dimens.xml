@@ -2,4 +2,7 @@
 <resources>
     <dimen name="map_width">200dp</dimen>
     <dimen name="map_height">500dp</dimen>
+
+    <!-- roulette panel -->
+    <dimen name="roulette_panel_side_length">20dp</dimen>
 </resources>

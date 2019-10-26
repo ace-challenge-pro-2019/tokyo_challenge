@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // 駅名表示
-        textView = findViewById(R.id.text);
+        textView = findViewById(R.id.selectedStationTextView);
         randomStation();
 
         // 詳細ボタン
