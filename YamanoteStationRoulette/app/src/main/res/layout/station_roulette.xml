@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/JY13"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY12"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY11"
+        app:layout_constraintStart_toEndOf="@+id/JY13"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY11"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY10"
+        app:layout_constraintStart_toEndOf="@+id/JY12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY10"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY09"
+        app:layout_constraintStart_toEndOf="@+id/JY11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY09"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY08"
+        app:layout_constraintStart_toEndOf="@+id/JY10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY08"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY07"
+        app:layout_constraintStart_toEndOf="@+id/JY09"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY07"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY06"
+        app:layout_constraintStart_toEndOf="@+id/JY08"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY06"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toStartOf="@id/JY05"
+        app:layout_constraintStart_toEndOf="@+id/JY07"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY05"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/JY06"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/JY04"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JY05" />
+
+    <ImageView
+        android:id="@+id/JY03"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JY04" />
+
+    <ImageView
+        android:id="@+id/JY02"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JY03" />
+
+    <ImageView
+        android:id="@+id/JY01"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JY02" />
+
+    <ImageView
+        android:id="@+id/JY30"
+        style="@style/RoulettePanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JY01" />
+
+    <ImageView
+        android:id="@+id/JY29"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/JY28"
+        app:layout_constraintTop_toBottomOf="@id/JY30" />
+
+    <ImageView
+        android:id="@+id/JY28"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY29"
+        app:layout_constraintStart_toEndOf="@+id/JY27" />
+
+    <ImageView
+        android:id="@+id/JY27"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY28"
+        app:layout_constraintStart_toEndOf="@+id/JY26" />
+
+    <ImageView
+        android:id="@+id/JY26"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY27"
+        app:layout_constraintStart_toEndOf="@+id/JY25" />
+
+    <ImageView
+        android:id="@+id/JY25"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY26"
+        app:layout_constraintStart_toEndOf="@+id/JY24" />
+
+    <ImageView
+        android:id="@+id/JY24"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY25"
+        app:layout_constraintStart_toEndOf="@+id/JY23" />
+
+    <ImageView
+        android:id="@+id/JY23"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY24"
+        app:layout_constraintStart_toEndOf="@+id/JY22" />
+
+    <ImageView
+        android:id="@+id/JY22"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY23"
+        app:layout_constraintStart_toEndOf="@+id/JY21" />
+
+    <ImageView
+        android:id="@+id/JY21"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY22"
+        app:layout_constraintStart_toEndOf="@+id/JY20" />
+
+    <ImageView
+        android:id="@+id/JY20"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY21"
+        app:layout_constraintStart_toEndOf="@+id/JY19" />
+
+    <ImageView
+        android:id="@+id/JY19"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/JY20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JY18" />
+
+    <ImageView
+        android:id="@+id/JY18"
+        style="@style/RoulettePanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JY17" />
+
+    <ImageView
+        android:id="@+id/JY17"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JY16" />
+
+    <ImageView
+        android:id="@+id/JY16"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JY15" />
+
+    <ImageView
+        android:id="@+id/JY15"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JY14" />
+
+    <ImageView
+        android:id="@+id/JY14"
+        style="@style/RoulettePanel"
+        app:layout_constraintBottom_toTopOf="@+id/JY15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/JY13" />
+
+    <TextView
+        android:id="@+id/selectedStationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
